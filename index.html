@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map of NYU</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Map of NYU</h1>
+        <p>Explore New York University's campuses and buildings</p>
+    </header>
+    
+    <div class="container">
+        <div id="map"></div>
+        <div class="sidebar">
+            <h2>NYU Locations</h2>
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search locations...">
+                    <button id="search-button">Search</button>
+                </div>
+                <div class="filter">
+                    <h3>Filter by Campus</h3>
+                    <select id="campus-filter">
+                        <option value="all">All Campuses</option>
+                        <option value="washington-square">Washington Square</option>
+                        <option value="brooklyn">Brooklyn</option>
+                        <option value="tandon">Tandon School of Engineering</option>
+                    </select>
+                </div>
+            </div>
+            <div id="location-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 NYU Interactive Map | Data from Mapbox</p>
+    </footer>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
